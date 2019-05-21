@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>React-based application</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+  <style>
+    .shower {
+      --slide-ratio: calc(16 / 9);
+    }
+
+    .slide {
+      padding: 10px 0 0 70px;
+    }
+
+    .slide::after {
+      left: initial;
+      right: 0;
+      width: calc(var(--ribbon-size) / 2);
+      height: calc(var(--ribbon-size) * 1);
+      padding-top: 0;
+    }
+  </style>
+</head>
+<body class="shower list">
+
+<header class="caption">
+  <h1>React-based application.</h1>
+  <p>CSSSR, 2019</p>
+</header>
+
+<section class="slide" id="cover">
+  <h2 class="shout">React-based application</h2>
+</section>
+
+<!-- TOC (begin) -->
+<section class="slide">
+
+  <h2>План</h2>
+
+  <ul>
+    <li>В чем проблема?</li>
+    <li>Решения</li>
+    <li>Почему CRA?</li>
+    <li>Начинаем кодить</li>
+    <li>Добавляем инструменты</li>
+    <li>Redux: старт</li>
+    <li>От страницы кота до энтерпрайза</li>
+    <li>Другие пути</li>
+    <li>Итог</li>
+  </ul>
+</section>
+<!-- TOC (end) -->
+
+<!-- В чем проблема? (begin) -->
+<section class="slide">
+  <h2>В чем проблема?</h2>
+
+  <ul>
+    <li class="next">React — только View</li>
+    <li class="next">А нужно:
+      <ul>
+        <li>роутинг;</li>
+        <li>управление состоянием;</li>
+        <li>синхронизация с бекендом;</li>
+        <li>инструменты отладки;</li>
+        <li>...</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<!-- В чем проблема? (end) -->
+
+<!-- Решения (begin) -->
+<section class="slide">
+
+  <h2>Решения</h2>
+
+  <p>Google [react boilerplate]:</p>
+  <p>результатов: примерно <span style="font-size: 2em;">805 000</span></p>
+</section>
+<!-- Решения (end) -->
+
+<!-- Решения (картинка) (begin) -->
+<section class="slide">
+  <img src="./pictures/react-boilerplate-search-result.jpg" alt="react boilerplate search result" class="cover">
+</section>
+<!-- Решения (картинка) (end) -->
+
+<!-- Решения (картинка) (begin) -->
+<section class="slide">
+  <img src="./pictures/full-suite.jpg" alt="full-suite" class="cover">
+</section>
+<!-- Решения (картинка) (end) -->
+
+<!-- Почему CRA? (begin) -->
+<section class="slide">
+
+  <h2>Почему CRA?</h2>
+
+  <ul>
+    <li>Less to Learn (<code>babel</code>, <code>webpack</code>, <code>jest</code>, etc)
+      <img src="./pictures/set-env.jpeg" height="200px" />
+    </li>
+    <li>Only One Dependency (<code>react-scripts</code>)</li>
+    <li>No Lock-In (<code>eject</code>)</li>
+    <li>Easy to maintain (<code>react-scripts@latest</code>)</li>
+  </ul>
+</section>
+<!-- Почему CRA? (end) -->
+
+
+<!-- Начинаем кодить (begin) -->
+<section class="slide">
+
+  <h2>Начинаем кодить</h2>
+
+  <pre>
+    <code><b>npx</b> create-react-app my-app</code>
+    <code><b>cd</b> my-app</code>
+    <code><b>npm</b> start</code>
+  </pre>
+
+  <p style="margin-top: -30px; text-align: center;">или <a
+    href="https://codesandbox.io/s/prod-dream-z1tbq">codesandbox</a>
+    <img src="./pictures/CodeSandbox-react-template.png" />
+  </p>
+</section>
+<!-- Начинаем кодить (end) -->
+
+<!-- Добавляем инструменты (begin) -->
+<section class="slide">
+
+  <h2>Добавляем инструменты</h2>
+
+  <ul>
+    <li class="next"><a href="https://yarnpkg.com/en/package/json-server">json-server</a></li>
+    <li class="next"><a href="https://yarnpkg.com/en/package/faker">faker</a></li>
+    <li class="next">eslint (config)</li>
+    <li class="next">prettier (config)</li>
+  </ul>
+
+  <p class="next">
+    <a href="https://github.com/alexbaumgertner/modular-application-skeleton/tree/variant/simple">
+      modular-application-skeleton#variant/simple
+    </a>
+  </p>
+</section>
+<!-- Добавляем инструменты (end) -->
+
+<!-- Добавляем расширения для отладки (begin) -->
+<section class="slide">
+
+  <h2>Добавляем расширения для отладки</h2>
+
+  <ul>
+    <li><a href="https://github.com/facebook/react-devtools">React Developer Tools</a></li>
+    <li><a href="http://extension.remotedev.io">Redux DevTools</a></li>
+    <li><a href="https://github.com/tulios/json-viewer">json-viewer</a></li>
+  </ul>
+</section>
+<!-- Добавляем расширения для отладки (end) -->
+
+<!-- Redux: старт (begin) -->
+<section class="slide">
+
+  <h2>Redux: старт</h2>
+
+  <p>1) Установка: <a href="https://redux.js.org/introduction/installation">redux</a>, <a href="https://react-redux.js.org/introduction/quick-start">react-redux</a></p>
+  <pre>
+    <code><b>yarn</b> add redux react-redux -S</code>
+  </pre>
+  <p>2) Подключение: <a href="https://github.com/reduxjs/redux/tree/master/examples/real-world">reduxjs#examples/real-world</a></p>
+</section>
+<!-- Redux: старт (end) -->
+
+<!-- Redux: server (begin) -->
+<section class="slide">
+
+  <h2>Redux: server</h2>
+
+  <p>Redux thunk: <a href="https://github.com/reduxjs/redux-thunk#installation">install</a></p>
+  <code>yarn add redux-thunk</code>
+</section>
+<!-- Redux: server (end) -->
+
+<!-- Redux init итог — картинка (begin) -->
+<section class="slide">
+  <img src="pictures/init-redux.png" alt="init redux" class="cover">
+</section>
+<!-- Redux init итог — картинка (end) -->
+
+<!-- Redux init итог — текст (begin) -->
+<section class="slide">
+  <h2 class="shout shrink">Один CRUD — <br /> 300 строк кода</h2>
+</section>
+<!-- Redux init итог — текст (end) -->
+
+<!-- 300 спартанцев (begin) -->
+<section class="slide">
+  <img src="pictures/300-spartans.jpg" alt="300 spartans" class="cover">
+</section>
+<!-- 300 спартанцев (end) -->
+
+<!-- redux-starter-kit (begin) -->
+<section class="slide">
+  <img src="pictures/redux-starter-kit.png" alt="redux starter kit" class="cover">
+</section>
+<!-- redux-starter-kit (end) -->
+
+<!-- redux saga (begin) -->
+<section class="slide">
+  <img src="pictures/redux-saga.png" alt="redux saga" class="cover">
+</section>
+<!-- redux saga (end) -->
+
+<section class="slide">
+  <h2>Спасибо!</h2>
+
+  <img src="https://alexbaumgertner.github.io/photos/alexbaumgertner_2014.jpg" width="300" style="float: right;"
+       alt="alexbaumgertner">
+  <ul style="margin: 200px 0 0 0;">
+    <li><a target="_blank" href="https://github.com/alexbaumgertner">github.com/alexbaumgertner</a></li>
+    <li><a target="_blank" href="https://twitter.com/alexbaumgertner">twitter.com/alexbaumgertner</a></li>
+    <li><a target="_blank" href="mailto:alex.baumgertner@gmail.com">alex.baumgertner@gmail.com</a></li>
+  </ul>
+</section>
+<footer class="badge">
+  <a href="https://github.com/easy-deep-learning/react-based-app">Fork me on GitHub</a>
+</footer>
+
+<div class="progress"></div>
+
+<script src="shower/shower.min.js"></script>
+
+</body>
+</html>
