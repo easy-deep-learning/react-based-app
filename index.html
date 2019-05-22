@@ -37,18 +37,15 @@
 <!-- TOC (begin) -->
 <section class="slide">
 
-  <h2>План</h2>
+  <h2>Примерный план</h2>
 
   <ul>
-    <li>В чем проблема?</li>
-    <li>Решения</li>
+    <li>В чем проблема? Какие есть решения?</li>
     <li>Почему CRA?</li>
-    <li>Начинаем кодить</li>
-    <li>Добавляем инструменты</li>
-    <li>Redux: старт</li>
-    <li>От страницы кота до энтерпрайза</li>
-    <li>Другие пути</li>
-    <li>Итог</li>
+    <li>Redux</li>
+    <li>CSS, UI</li>
+    <li>Тестирование</li>
+    <li>Дальнейшее развитие приложения</li>
   </ul>
 </section>
 <!-- TOC (end) -->
@@ -75,10 +72,10 @@
 <!-- Решения (begin) -->
 <section class="slide">
 
-  <h2>Решения</h2>
+  <h2>Google [react boilerplate]:</h2>
 
-  <p>Google [react boilerplate]:</p>
-  <p>результатов: примерно <span style="font-size: 2em;">805 000</span></p>
+  <p><span style="font-size: 8em;">~ 805 000</span></p>
+  <p>результатов</p>
 </section>
 <!-- Решения (end) -->
 
@@ -149,10 +146,10 @@
 </section>
 <!-- Добавляем инструменты (end) -->
 
-<!-- Добавляем расширения для отладки (begin) -->
+<!-- Добавляем инструменты для отладки (begin) -->
 <section class="slide">
 
-  <h2>Добавляем расширения для отладки</h2>
+  <h2>Добавляем инструменты для отладки</h2>
 
   <ul>
     <li><a target="_blank" href="https://github.com/facebook/react-devtools">React Developer Tools</a></li>
@@ -160,33 +157,36 @@
     <li><a target="_blank" href="https://github.com/tulios/json-viewer">json-viewer</a></li>
   </ul>
 </section>
-<!-- Добавляем расширения для отладки (end) -->
+<!-- Добавляем инструменты для отладки (end) -->
 
 <!-- Redux: старт (begin) -->
 <section class="slide">
 
   <h2>Redux: старт</h2>
 
-  <p>1) Установка: <a target="_blank" href="https://redux.js.org/introduction/installation">redux</a>, <a href="https://react-redux.js.org/introduction/quick-start">react-redux</a></p>
+  <p>1) Установка: <a target="_blank" href="https://redux.js.org/introduction/installation">redux</a>, <a
+    href="https://react-redux.js.org/introduction/quick-start">react-redux</a></p>
   <pre>
     <code><b>yarn</b> add redux react-redux -S</code>
   </pre>
-  <p>2) Подключение: <a target="_blank" href="https://github.com/reduxjs/redux/tree/master/examples/real-world">reduxjs#examples/real-world</a></p>
+  <p>2) Подключение: <a target="_blank" href="https://github.com/reduxjs/redux/tree/master/examples/real-world">reduxjs#examples/real-world</a>
+  </p>
 </section>
 <!-- Redux: старт (end) -->
 
-<!-- Redux: server (begin) -->
+<!-- Redux: получение данных (begin) -->
 <section class="slide">
 
-  <h2>Redux: server</h2>
+  <h2>Redux: получение данных</h2>
 
   <p>Redux thunk: <a target="_blank" href="https://github.com/reduxjs/redux-thunk#installation">install</a></p>
   <code>yarn add redux-thunk</code>
 
   <h3>Результат:</h3>
-  <p><a target="_blank" href="https://github.com/alexbaumgertner/modular-application-skeleton/pull/2/files">modular-application-skeleton#variant/init-redux</a></p>
+  <p><a target="_blank" href="https://github.com/alexbaumgertner/modular-application-skeleton/pull/2/files">modular-application-skeleton#variant/init-redux</a>
+  </p>
 </section>
-<!-- Redux: server (end) -->
+<!-- Redux: получение данных (end) -->
 
 <!-- Redux init итог — картинка (begin) -->
 <section class="slide">
@@ -216,7 +216,8 @@
 <!-- redux-starter-kit, установка (begin) -->
 <section class="slide">
 
-  <h2>redux-starter-kit, <a target="_blank" href="https://redux-starter-kit.js.org/introduction/quick-start">установка</a></h2>
+  <h2>redux-starter-kit, <a target="_blank"
+                            href="https://redux-starter-kit.js.org/introduction/quick-start">установка</a></h2>
 
   <p>
     <code>
@@ -232,36 +233,18 @@
 <!-- Селекторы, мемоизация, иммутабельность (begin) -->
 <section class="slide">
 
-  <h2>Селекторы, мемоизация, иммутабельность</h2>
-
-  <p>Вычисления данных на основе state</p>
-  <ul>
-    <li><a href="https://redux-starter-kit.js.org/api/createselector">createSelector</a></li>
-  </ul>
-</section>
-<!-- Селекторы, мемоизация, иммутабельность (end) -->
-
-<!-- Роутер и redux (begin) -->
-<section class="slide">
-
-  <h2>Роутер и redux</h2>
-
-  <p>
-    <a target="_blank" href="https://redux.js.org/advanced/usage-with-react-router">
-    Usage with React Router</a>
+  <h2><a target="_blank" href="https://redux-starter-kit.js.org/api/createselector">Селекторы</a>, мемоизация,
+    иммутабельность</h2>
+  <p>Селекторы — вычисления данных на основе state.
+    <br>
+    <a
+      target="_blank"
+      href="https://github.com/alexbaumgertner/modular-application-skeleton/pull/1/commits/ba4589c7f6dc63227fd434823f029508fe20de10">
+      <img src="./pictures/add-selectors.png" height="350px" />
+    </a>
   </p>
 </section>
-<!-- Роутер и redux (end) -->
-
-
-<!-- Code splitting (begin) -->
-<section class="slide">
-
-  <h2>Code splitting</h2>
-
-  <p></p>
-</section>
-<!-- Code splitting (end) -->
+<!-- Селекторы, мемоизация, иммутабельность (end) -->
 
 
 <!-- Перерыв 5 мин (begin) -->
@@ -277,10 +260,45 @@
   <ul>
     <li class="next"><a target="_blank" href="https://wsd.events/2015/10/31/pres/css-modules/">css-modules</a></li>
     <li class="next"><a target="_blank" href="https://ru.bem.info/methodology/">BEM</a></li>
-    <li class="next"><a target="_blank" href="https://github.com/bem/bem-react/tree/master/packages/classname">@bem-react/classname</a></li>
+    <li class="next">
+      <a
+        target="_blank"
+        href="https://github.com/bem/bem-react/tree/master/packages/classname">
+        @bem-react/classname
+      </a>: нет поддержки css-modules
+    </li>
+    <li class="next">
+      <a target="_blank" href="https://github.com/mistakster/bem-cn-lite">
+        bem-cn-lite
+      </a>: нет поддержки css-modules
+    </li>
+    <li class="next" style="font-weight: bold;">
+      <a target="_blank" href="https://github.com/Connormiha/bem-css-modules">bem-css-modules</a>: есть поддержка
+      css-modules!
+    </li>
   </ul>
 </section>
 <!-- CSS (end) -->
+
+<!-- css-modules vs convention (begin) -->
+<section class="slide">
+  <h2>css-modules vs pure BEM</h2>
+
+  <p>
+    <img src="./pictures/css-modules.png" />
+  </p>
+  <p>VS</p>
+  <p>
+    <img src="./pictures/bem-css-naming.png" />
+    <br>
+    <a
+      target="_blank"
+      href="https://github.com/alexbaumgertner/modular-application-skeleton/pull/1/commits/32a8d9e9286bffb775abd7b4e931805cdea4b725?file-filters%5B%5D=.css&file-filters%5B%5D=.js&file-filters%5B%5D=.json&file-filters%5B%5D=.jsx">
+      bem-css-naming
+    </a>
+  </p>
+</section>
+<!-- css-modules vs convention (end) -->
 
 
 <!-- UI-библиотеки (begin) -->
@@ -291,6 +309,7 @@
   <ul>
     <li><a target="_blank" href="https://react.semantic-ui.com">semantic-ui</a></li>
     <li><a target="_blank" href="https://react-bootstrap.github.io">react-bootstrap</a></li>
+    <li><a target="_blank" href="https://material-ui.com">Material-UI</a></li>
     <li class="next"><a target="_blank" href="https://ru.bem.info/technologies/bem-react/">
       bem-react</a> (в стадии активной разработки)
     </li>
@@ -306,11 +325,30 @@
 
   <ul>
     <li><a target="_blank" href="https://jestjs.io">Jestjs</a>: unit, integration</li>
-    <li><a target="_blank" href="https://pptr.dev">Puppeteer</a>: end-to-end</li>
-    <li><a href="https://gemini-testing.github.io">Gemini</a> UI-lib (screenshots)</li>
+    <li>
+      <a target="_blank" href="https://pptr.dev">Puppeteer</a>: end-to-end.
+      <a
+        target="_blank"
+        href="https://github.com/alexbaumgertner/modular-application-skeleton/pull/1/commits/d8c6573dd193b4fa4e61791fa33312928384eb44?file-filters%5B%5D=.js&file-filters%5B%5D=.json">
+        Пример
+      </a>
+    </li>
+    <li><a target="_blank" href="https://gemini-testing.github.io">Gemini</a> UI-lib (screenshots)</li>
   </ul>
 </section>
 <!-- Тестирование (end) -->
+
+<!-- CI (begin) -->
+<section class="slide">
+
+  <h2>CI</h2>
+
+  <ul>
+    <li><a target="_blank" href="https://yarnpkg.com/en/package/husky">husky</a></li>
+    <li><a target="_blank" href="https://yarnpkg.com/en/package/lint-staged">lint-staged</a></li>
+  </ul>
+</section>
+<!-- CI (end) -->
 
 
 <!-- Вопросы (begin) -->
@@ -319,20 +357,28 @@
 </section>
 <!-- Вопросы (end) -->
 
-<!-- Дальнейший путь (begin) -->
+<!-- Дальнейшее развитие приложения (begin) -->
 <section class="slide">
 
-  <h2>Дальнейший путь</h2>
+  <h2>Дальнейшее развитие приложения</h2>
 
   <ul>
     <li>Авторизация, <a href="https://auth0.com">auth0.com</a></li>
     <li><a target="_blank" href="https://redux.js.org/recipes/server-rendering">Server Side Rendering</a></li>
-    <li>микрофронтед</li>
-    <li><a target="_blank" href="https://redux-saga.js.org">redux-saga</a></li>
-    <li><a target="_blank" href="https://github.com/logux/logux">logux</a></li>
+    <li><a target="_blank" href="https://redux-saga.js.org">redux-saga</a>: сложная бизнес-логика</li>
+    <li><a target="_blank" href="https://micro-frontends.org">микрофронтед</a>: разделение проекта между командами</li>
+    <li>
+      <a target="_blank" href="https://github.com/logux/logux">logux</a>:
+      <abbr
+        title="Conflict-free Replicated Data Types, что по-русски переводится примерно как Бесконфликтные реплицированные типы данных">
+        CRDT
+      </abbr>
+    </li>
+    <li>Routing (with Redux)</li>
+    <li><a target="_blank" href="https://reactjs.org/docs/code-splitting.html">Code Splitting</a></li>
   </ul>
 </section>
-<!--  Дальнейший путь (end) -->
+<!-- Дальнейшее развитие приложения (end) -->
 
 <section class="slide">
   <h2>Спасибо!</h2>
