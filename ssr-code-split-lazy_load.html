@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>React-based application</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+  <style>
+    .shower {
+      --slide-ratio: calc(16 / 9);
+    }
+
+    .slide {
+      padding: 10px 0 0 70px;
+    }
+
+    .slide::after {
+      left: initial;
+      right: 0;
+      width: calc(var(--ribbon-size) / 2);
+      height: calc(var(--ribbon-size) * 1);
+      padding-top: 0;
+    }
+  </style>
+</head>
+<body class="shower list">
+
+<header class="caption">
+  <h1>RBA: code splitting, SSR, lazy-loading</h1>
+  <p>CSSSR, 2019</p>
+</header>
+
+<section class="slide">
+  <h2 class="shout">
+    React <br>
+    Based <br>
+    Application
+  </h2>
+</section>
+
+<section class="slide" id="cover">
+  <h2 class="shout">RBA: <br>CS, SSR</h2>
+</section>
+
+<!-- TOC (begin) -->
+<section class="slide">
+
+  <h2>Примерный план</h2>
+
+  <ul>
+    <li>В прошлой серии</li>
+    <li>Профилирование</li>
+    <li>Code splitting</li>
+    <li>SSR: что это и зачем
+      <ul>
+        <li>CRA + ?</li>
+        <li>Next JS</li>
+      </ul>
+    </li>
+    <li>Дальнейшее развитие приложения</li>
+  </ul>
+</section>
+<!-- TOC (end) -->
+
+<!-- В чем проблема? (begin) -->
+<section class="slide">
+  <h2>В чем проблема?</h2>
+
+  <ul>
+    <li class="next">Рендер в браузере</li>
+    <li class="next">А нужно:
+      <ul>
+        <li>индексация поисковиками;</li>
+        <li>делиться в соц-сетях;</li>
+        <li>слабые устройства;</li>
+        <li>много js-кода;</li>
+        <li>...</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<!-- В чем проблема? (end) -->
+
+<!-- SSR (begin) -->
+<section class="slide">
+  <h2>SSR</h2>
+  <p>server side rendering:</p>
+  <ul>
+    <li>принять запрос</li>
+    <li>получить контекст (route, cookie, body...)</li>
+    <li>собрать данные</li>
+    <li>отправить клиенту данные и текущее состояние (state)</li>
+    <li>не отправлять лишние данные</li>
+  </ul>
+</section>
+<!-- SSR (end) -->
+
+<!-- Решения (begin) -->
+<section class="slide">
+
+  <h2>SSR:</h2>
+
+  <p><span style="font-size: 8em;">~ 100 500</span></p>
+  <p>статей</p>
+</section>
+<!-- Решения (end) -->
+
+<!-- react lazy (begin) -->
+<section class="slide">
+  <img src="pictures/react-lazy-does-not-support-ssr.png" alt="" class="cover">
+</section>
+<!-- react lazy (end) -->
+
+<!--Loadable Components (begin) -->
+<section class="slide">
+
+  <h2>Loadable Components</h2>
+
+  <p>
+    <a href="https://www.smooth-code.com/open-source/loadable-components/docs/server-side-rendering/">
+    Server Side Rendering</a>
+  </p>
+  <code>
+    yarn add @loadable/server && <br>
+    yarn add --dev @loadable/babel-plugin @loadable/webpack-plugin
+  </code>
+</section>
+<!-- Loadable Components (end) -->
+
+<!-- Готовые решения (begin) -->
+<section class="slide">
+
+  <h2>Готовые решения</h2>
+
+  <ul>
+    <li><a href="https://github.com/jaredpalmer/razzle">Razzle</a></li>
+    <li><a href="https://react-server.io">React Server</a></li>
+    <li><a href="https://nextjs.org">Next.js</a></li>
+    <li><a href="https://github.com/jaredpalmer/after.js">After.js</a></li>
+  </ul>
+</section>
+<!-- Готовые решения (end) -->
+
+<!-- Полезные материалы (begin) -->
+<section class="slide">
+  <h2>Полезные материалы</h2>
+  <ul>
+    <li><a href="https://habr.com/ru/post/323458/">Habr: Что взять за основу React приложения</a></li>
+    <li><a
+      href="https://medium.com/@cereallarceny/server-side-rendering-in-create-react-app-with-all-the-goodies-without-ejecting-4c889d7db25e">
+      SSR with CRA, code-splitting, React Router, Helmet, Redux, and Thunk</a></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</section>
+<!-- Полезные материалы (end) -->
+
+<!-- Вопросы (begin) -->
+<section class="slide">
+  <h2 class="shout">Секция вопросов и ответов</h2>
+</section>
+<!-- Вопросы (end) -->
+
+<!-- Дальнейшее развитие приложения (begin) -->
+<section class="slide">
+
+  <h2>Дальнейшее развитие приложения</h2>
+
+  <ul>
+    <li>Авторизация
+      <ul>
+        <li class="next">sessions</li>
+        <li class="next">jwt</li>
+        <li class="next">open ID</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<!-- Дальнейшее развитие приложения (end) -->
+
+<section class="slide">
+  <h2>Спасибо!</h2>
+
+  <img src="https://alexbaumgertner.github.io/photos/alexbaumgertner_2014.jpg" width="300" style="float: right;"
+       alt="alexbaumgertner">
+  <ul style="margin: 200px 0 0 0;">
+    <li><a target="_blank" href="https://csssr.com/ru/school">csssr.com/ru/school</a></li>
+    <li><a target="_blank" href="https://twitter.com/csssr_dev">twitter.com/csssr_dev</a></li>
+    <li><a target="_blank" href="mailto:info@csssr.school">info@csssr.school</a></li>
+  </ul>
+</section>
+
+
+<footer class="badge">
+  <a href="https://github.com/easy-deep-learning/react-based-app">Fork me on GitHub</a>
+</footer>
+<div class="progress"></div>
+<script src="shower/shower.min.js"></script>
+</body>
+</html>
