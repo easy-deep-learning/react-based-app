@@ -68,11 +68,12 @@
   <h2>В прошлой серии</h2>
   <p>Построили каркас приложения:</p>
   <ul>
-    <li><a href="https://facebook.github.io/create-react-app/" target="_blank">create react app</a></li>
+    <li><a href="https://facebook.github.io/create-react-app/" target="_blank">create react app</a>
+    </li>
     <li>
       <a href="https://redux.js.org" target="_blank">redux</a>,
       <a href="https://redux-starter-kit.js.org"
-      target="_blank">redux-starter-kit</a></li>
+        target="_blank">redux-starter-kit</a></li>
     <li><a href="https://reacttraining.com/react-router/web" target="_blank">react-router</a></li>
     <li><a href="https://react.semantic-ui.com" target="_blank">semantic-ui-react</a></li>
     <li><a href="https://github.com/Marak/faker.js" target="_blank">faker</a>,
@@ -92,7 +93,14 @@
 
   <h2>Добавление контента</h2>
 
-  <p></p>
+  <p>
+    <a
+      target="_blank"
+      href="https://github.com/alexbaumgertner/modular-application-skeleton/pull/12/files">
+      feature/add-content
+    </a>
+  </p>
+  <img src="./pictures/add-content.png" alt="Добавление контента" width="90%">
 </section>
 <!-- Добавление контента (end) -->
 
@@ -101,7 +109,9 @@
 
   <h2>В чем проблема: весь контент грузится сразу</h2>
 
-  <p></p>
+  <p>
+    <img src="./pictures/load-all-content.png" alt="весь контент грузится сразу" width="90%">
+  </p>
 </section>
 <!-- В чем проблема: весь контент грузится сразу (end) -->
 
@@ -111,9 +121,38 @@
 
   <h2>Решение: lazy loading</h2>
 
-  <p>Загрузка изображений только при попадании во вьюпорт</p>
+  <p>
+    Загрузка изображений только при попадании во вьюпорт:</p>
+
+  <ul>
+    <li>
+      <a target="_blank"
+        href="https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/">
+        Lazy Loading Images and Video</a>
+    </li>
+    <li>
+      <a target="_blank"
+        href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API">
+        Intersection Observer API Doc
+      </a>,
+      <a
+        target="_blank"
+        href="https://thebuilder.github.io/react-intersection-observer/?path=/story/useinview-hook--basic">React Example</a>
+    </li>
+    <li><a href="https://fpapado.github.io/react-lazy-images/">react-lazy-images</a> — библиотека для ленивой загрузки</li>
+  </ul>
+
+  <p><a target="_blank" href="http://localhost:3000/catalog/98e79042-a712-403b-9808-2cae1aee1364">Демо</a></p>
+
+  <p>PS: <a target="_blank" href="https://griddlegriddle.github.io/v0-docs/infiniteScroll.html">Infinite Scroll</a></p>
 </section>
 <!-- Решение: lazy loading (end) -->
+
+<!-- react-lazy-images (begin) -->
+<section class="slide">
+  <img src="./pictures/add-lazy-loading.png" alt="lazy-loading" class="cover">
+</section>
+<!-- react-lazy-images (end) -->
 
 <!-- Добавление разделов (begin) -->
 <section class="slide">
@@ -249,8 +288,9 @@
   <h2>Loadable Components</h2>
 
   <p>
-    <a href="https://www.smooth-code.com/open-source/loadable-components/docs/server-side-rendering/">
-    Server Side Rendering</a>
+    <a
+      href="https://www.smooth-code.com/open-source/loadable-components/docs/server-side-rendering/">
+      Server Side Rendering</a>
   </p>
   <code>
     yarn add @loadable/server && <br>
@@ -278,14 +318,18 @@
 <section class="slide">
   <h2>Полезные материалы</h2>
   <ul>
-    <li><a href="https://habr.com/ru/post/323458/">Habr: Что взять за основу React приложения</a></li>
+    <li><a href="https://habr.com/ru/post/323458/">Habr: Что взять за основу React приложения</a>
+    </li>
     <li><a
       href="https://medium.com/@cereallarceny/server-side-rendering-in-create-react-app-with-all-the-goodies-without-ejecting-4c889d7db25e">
       SSR with CRA, code-splitting, React Router, Helmet, Redux, and Thunk</a></li>
     <li><a href="https://github.com/sharegate/craco">
       Create React App Configuration Override
     </a></li>
-    <li></li>
+
+    <li><a
+      href="https://hackernoon.com/lazy-loading-and-preloading-components-in-react-16-6-804de091c82d">Lazy loading (and preloading) components in React 16.6</a>
+    </li>
     <li></li>
     <li></li>
     <li></li>
@@ -319,8 +363,9 @@
 <section class="slide">
   <h2>Спасибо!</h2>
 
-  <img src="https://alexbaumgertner.github.io/photos/alexbaumgertner_2014.jpg" width="300" style="float: right;"
-       alt="alexbaumgertner">
+  <img src="https://alexbaumgertner.github.io/photos/alexbaumgertner_2014.jpg" width="300"
+    style="float: right;"
+    alt="alexbaumgertner">
   <ul style="margin: 200px 0 0 0;">
     <li><a target="_blank" href="https://csssr.com/ru/school">csssr.com/ru/school</a></li>
     <li><a target="_blank" href="https://twitter.com/csssr_dev">twitter.com/csssr_dev</a></li>
