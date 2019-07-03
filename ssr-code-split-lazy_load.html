@@ -62,28 +62,153 @@
 </section>
 <!-- TOC (end) -->
 
-<!-- В чем проблема? (begin) -->
+<!-- В прошлой серии (begin) -->
 <section class="slide">
-  <h2>В чем проблема?</h2>
 
+  <h2>В прошлой серии</h2>
+  <p>Построили каркас приложения:</p>
   <ul>
-    <li class="next">Рендер в браузере</li>
-    <li class="next">А нужно:
-      <ul>
-        <li>индексация поисковиками;</li>
-        <li>делиться в соц-сетях;</li>
-        <li>слабые устройства;</li>
-        <li>много js-кода;</li>
-        <li>...</li>
-      </ul>
-    </li>
+    <li><a href="https://facebook.github.io/create-react-app/" target="_blank">create react app</a></li>
+    <li>
+      <a href="https://redux.js.org" target="_blank">redux</a>,
+      <a href="https://redux-starter-kit.js.org"
+      target="_blank">redux-starter-kit</a></li>
+    <li><a href="https://reacttraining.com/react-router/web" target="_blank">react-router</a></li>
+    <li><a href="https://react.semantic-ui.com" target="_blank">semantic-ui-react</a></li>
+    <li><a href="https://github.com/Marak/faker.js" target="_blank">faker</a>,
+      <a href="https://github.com/typicode/json-server" target="_blank">json-server</a></li>
   </ul>
 </section>
-<!-- В чем проблема? (end) -->
+<!-- В прошлой серии (end) -->
 
-<!-- SSR (begin) -->
+<!-- Следующие шаги (begin) -->
 <section class="slide">
-  <h2>SSR</h2>
+  <h2 class="shout">Следующие шаги</h2>
+</section>
+<!-- Следующие шаги (end) -->
+
+<!-- Добавление контента (begin) -->
+<section class="slide">
+
+  <h2>Добавление контента</h2>
+
+  <p></p>
+</section>
+<!-- Добавление контента (end) -->
+
+<!-- В чем проблема: весь контент грузится сразу (begin) -->
+<section class="slide">
+
+  <h2>В чем проблема: весь контент грузится сразу</h2>
+
+  <p></p>
+</section>
+<!-- В чем проблема: весь контент грузится сразу (end) -->
+
+
+<!-- Решение: lazy loading (begin) -->
+<section class="slide">
+
+  <h2>Решение: lazy loading</h2>
+
+  <p>Загрузка изображений только при попадании во вьюпорт</p>
+</section>
+<!-- Решение: lazy loading (end) -->
+
+<!-- Добавление разделов (begin) -->
+<section class="slide">
+
+  <h2>Добавление разделов</h2>
+
+  <p>
+    <a target="_blank"
+      href="https://github.com/alexbaumgertner/modular-application-skeleton/tree/feature/add-sections">feature/add-sections</a>
+  </p>
+
+  <img src="./pictures/add-sections.png" alt="Добавление разделов">
+</section>
+<!-- Добавление разделов (end) -->
+
+<!-- Добавление функциональности (begin) -->
+<section class="slide">
+
+  <h2>Добавление функциональности</h2>
+
+  <p>
+    <a
+      target="_blank"
+      href="https://github.com/alexbaumgertner/modular-application-skeleton/tree/feature/add-markdown">
+      feature/add-markdown
+    </a>
+  </p>
+  <img width="90%" src="./pictures/add-markdown-support.png" alt="Добавление функциональности">
+</section>
+<!-- Добавление функциональности (end) -->
+
+<!-- В чем проблема: один бандл (begin) -->
+<section class="slide">
+  <h2>В чем проблема: один бандл</h2>
+
+  <p>Профилирование</p>
+  <mark>sh:</mark>
+  <br>
+  <code>
+    yarn add source-map-explorer
+  </code>
+  <br>
+  <br>
+  <mark>package.json</mark>
+  <br>
+  <code>
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+  </code>
+</section>
+<!-- В чем проблема: один бандл (end) -->
+
+<!-- Результат профилирования (begin) -->
+<section class="slide">
+  <img src="./pictures/prod-bundle-size-libs.png" alt="Результат профилирования" class="cover">
+</section>
+<!-- Результат профилирования (end) -->
+
+<!-- Решение: code splitting (begin) -->
+<section class="slide">
+  <h2>Решение: code splitting</h2>
+
+  <p>React:
+    <a href="https://reactjs.org/docs/react-api.html#suspense" target="_blank">Suspense</a>,
+    <a href="https://reactjs.org/docs/react-api.html#reactlazy" target="_blank">Lazy</a>
+    <br>
+    <a target="_blank"
+      href="https://github.com/alexbaumgertner/modular-application-skeleton/pull/11/files">
+      feature/add-code-splitting
+    </a>
+  </p>
+  <a target="_blank"
+    href="https://github.com/alexbaumgertner/modular-application-skeleton/pull/11/files">
+    <img src="./pictures/add-code-splitting.png" alt="code splitting" width="90%">
+  </a>
+</section>
+<!-- Решение: code splitting (end) -->
+
+
+<!-- В чем проблема: рендер в браузере (begin) -->
+<section class="slide">
+  <h2>В чем проблема: рендер в браузере</h2>
+
+  <ul>
+    <li class="next">индексация поисковиками;</li>
+    <li class="next">делиться в соц-сетях;</li>
+    <li class="next">слабые устройства;</li>
+    <li class="next">много js-кода;</li>
+    <li class="next">...</li>
+  </ul>
+</section>
+<!-- В чем проблема: рендер в браузере (end) -->
+
+<!-- Решение: SSR (begin) -->
+<section class="slide">
+  <h2>Решение: SSR</h2>
   <p>server side rendering:</p>
   <ul>
     <li>принять запрос</li>
@@ -93,7 +218,7 @@
     <li>не отправлять лишние данные</li>
   </ul>
 </section>
-<!-- SSR (end) -->
+<!-- Решение: SSR (end) -->
 
 <!-- Решения (begin) -->
 <section class="slide">
@@ -127,12 +252,19 @@
 </section>
 <!-- Loadable Components (end) -->
 
+<!-- Demotivated nothing done (begin) -->
+<section class="slide">
+  <img src="./pictures/demotivator-cat-nothing-done.jpg" alt="Demotivated nothing done" class="cover">
+</section>
+<!-- Demotivated nothing done (end) -->
+
 <!-- Готовые решения (begin) -->
 <section class="slide">
 
   <h2>Готовые решения</h2>
 
   <ul>
+    <li><a href="https://github.com/cereallarceny/cra-ssr">cereallarceny/cra-ssr</a></li>
     <li><a href="https://github.com/jaredpalmer/razzle">Razzle</a></li>
     <li><a href="https://react-server.io">React Server</a></li>
     <li><a href="https://nextjs.org">Next.js</a></li>
@@ -149,7 +281,9 @@
     <li><a
       href="https://medium.com/@cereallarceny/server-side-rendering-in-create-react-app-with-all-the-goodies-without-ejecting-4c889d7db25e">
       SSR with CRA, code-splitting, React Router, Helmet, Redux, and Thunk</a></li>
-    <li></li>
+    <li><a href="https://github.com/sharegate/craco">
+      Create React App Configuration Override
+    </a></li>
     <li></li>
     <li></li>
     <li></li>
